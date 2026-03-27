@@ -1,30 +1,22 @@
 # Synapse Click ⚡
 
-**Synapse Click** is a modern, high-performance Android Accessibility Auto-Clicker built to execute massive geometric touch sequences dynamically across heavily fragmented Android devices. It natively interfaces with Android OS Accessibility Service bounds via `WindowManager` protocols. 
+<p align="center">
+  <img src="app/src/main/res/drawable/custom_app_icon.jpg" width="128" alt="Synapse Click Logo">
+</p>
 
-## 🚀 Key Features
+**Synapse Click** is a fast, easy-to-use Auto-Clicker for Android devices. Whether you're grinding in a game that requires endless tapping or you just need to automate repetitive tasks on your phone, Synapse Click can handle it perfectly for you!
 
-* **Advanced Layout Overlays:** Features a collapsible, fully draggable HUD. Re-architected in pure codebase logic with dynamic `GradientDrawable` arrays and `RippleDrawable` touch-handlers rendering seamlessly rounded boxes without polluting the standard XML pipelines. 
-* **Dynamic Geometrics (Swipes):** Integrates an automated DP sequence calculator natively overriding generic swipe behavior. The app extracts point-to-point Vector pixel distances via the Pythagorean theorem, natively dividing out active screen densities and mapping them out to flawless 800 DP/s humanized Smooth Scrolls. 
-* **Isolated Sequencing Delays:** Built around an intelligent Sequence loop logic where users can modify Intra-Node internal "Action Delays" entirely independently of the global Loop-Restart Interval via dynamically bound StateFlow inputs.
+## 🚀 What it Does
+* **Unlimited Clicks & Swipes:** You can add as many tap and swipe actions as you want to your screen. The app will perform all of them in order automatically.
+* **Floating Control Menu:** The controls float right on top of your screen! You can drag the menu around wherever you need it, or collapse it into a tiny bar so it stays completely out of your way while you use other apps.
+* **Smooth Human-Like Swipes:** The app automatically calculates the exact distance for your swipes so they scroll perfectly smooth across the screen, mimicking a natural human finger instead of glitching or jumping.
+* **Custom Timers:** You have total control over the speed! You can set exactly how long the app waits between each tap, and how long to wait before the whole sequence restarts.
 
-## 🛠️ Usage Permissions 
+## 📱 Required Permissions (Setup)
+To make the auto-clicker work properly, Android requires you to give the app two specific permissions. When you open the configuration screen, you will need to click the buttons to turn these on in your Settings:
 
-To successfully leverage Synapse Click upon initial setup, the following permissions must be explicitly approved via the Android `Settings` router:
+1. **Accessibility Service:** This is the most important permission. It is what actually allows the app to simulate tapping and swiping the screen on your behalf. *(Note: We only use this permission to perform the clicks you ask for!)*
+2. **Draw Over Other Apps (Overlay):** This permission allows our floating control menu to stay visible on top of your screen while you are inside your games or other apps.
 
-1. **Draw Over Other Apps (`SYSTEM_ALERT_WINDOW`):** Grants the application permission to render the control HUD persistently above fullscreen games or browser bounds. 
-2. **Accessibility Service:** Required by Android 8.0+ security specifications to actually execute simulated touch outputs and structural gesture pathing on your behalf. 
-
-## 🔧 Building The Software
-
-Synapse Click actively employs standard `gradlew` architectures. 
-
-To configure a debug build locally or compile raw deployment `.apk` files, you can utilize any CLI wrapper targeting the primary gradle manifest:
-
-```bash
-# Debug Deploy
-./gradlew assembleDebug
-
-# Secure Keystore Release Deploy
-./gradlew assembleRelease
-```
+## 📥 How to Install
+Simply download the latest `app-release.apk` file from the **Releases** tab on the right side of this GitHub page and install it directly onto your Android device!

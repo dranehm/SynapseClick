@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Synapse Click</string>
+    <string name="accessibility_service_description">Synapse Click uses the AccessibilityService API to perform simulated taps and swipes on your screen.</string>
+</resources>

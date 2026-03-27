@@ -7,7 +7,7 @@
 **Synapse Click** is a fast, easy-to-use Auto-Clicker for Android devices. Whether you're grinding in a game that requires endless tapping or you just need to automate repetitive tasks on your phone, Synapse Click can handle it perfectly for you!
 
 ## 🚀 What it Does
-* **Unlimited Clicks & Swipes:** You can add as many tap and swipe actions as you want to your screen. The app will perform all of them in order automatically.
+* **Unlimited Clicks & Swipes:** You can add as many tap actions as you want to your screen. The app will perform all of them in order automatically.
 * **Floating Control Menu:** The controls float right on top of your screen! You can drag the menu around wherever you need it, or collapse it into a tiny bar so it stays completely out of your way while you use other apps.
 * **Smooth Human-Like Swipes:** The app automatically calculates the exact distance for your swipes so they scroll perfectly smooth across the screen, mimicking a natural human finger instead of glitching or jumping.
 * **Custom Timers:** You have total control over the speed! You can set exactly how long the app waits between each tap, and how long to wait before the whole sequence restarts.

@@ -100,15 +100,15 @@ MERGED from [androidx.startup:startup-runtime:1.1.1] C:\Users\pc\scoop\apps\grad
 	android:allowBackup
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:10:9-35
 	android:theme
-		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:17:9-49
+		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:17:9-50
 	android:dataExtractionRules
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:11:9-65
-activity#com.example.autoclicker.MainActivity
+activity#com.example.synapseclick.MainActivity
 ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:20:9-28:20
 	android:exported
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:22:13-36
 	android:theme
-		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:23:13-53
+		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:23:13-54
 	android:name
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:21:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
@@ -121,7 +121,7 @@ category#android.intent.category.LAUNCHER
 ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:26:27-74
-service#com.example.autoclicker.ClickerAccessibilityService
+service#com.example.synapseclick.ClickerAccessibilityService
 ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:30:9-40:19
 	android:exported
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:32:13-36
@@ -141,7 +141,7 @@ ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:37:13-39:72
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:39:17-69
 	android:name
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:38:17-60
-service#com.example.autoclicker.OverlayService
+service#com.example.synapseclick.OverlayService
 ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:42:9-47:19
 	android:exported
 		ADDED from D:\Projects\AutoClicker\app\src\main\AndroidManifest.xml:44:13-37
@@ -271,7 +271,7 @@ ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gr
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
-permission#com.example.autoclicker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+permission#com.example.synapseclick.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
 	android:protectionLevel
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
@@ -281,7 +281,7 @@ uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
-uses-permission#com.example.autoclicker.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+uses-permission#com.example.synapseclick.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
 ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
 	android:name
 		ADDED from [androidx.core:core:1.12.0] C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\2b45feeee8c5410e649b0e982f3986d5\transformed\core-1.12.0\AndroidManifest.xml:26:22-94

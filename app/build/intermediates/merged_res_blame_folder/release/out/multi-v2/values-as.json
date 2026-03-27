@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.autoclicker.app-mergeReleaseResources-38:/values-as/values-as.xml",
+            "outputFile": "com.example.synapseclick.app-mergeReleaseResources-38:/values-as/values-as.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\caches\\transforms-3\\ac567cb2e58237788ba82d38219aa208\\transformed\\material3-release\\res\\values-as\\values-as.xml",

@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.autoclicker"
+    namespace = "com.example.synapseclick"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.autoclicker"
+        applicationId = "com.example.synapseclick"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

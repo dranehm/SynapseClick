@@ -1,4 +1,4 @@
-com.example.autoclicker
+com.example.synapseclick
 attr alpha
 attr font
 attr fontProviderAuthority
@@ -261,7 +261,7 @@ style TextAppearance_Compat_Notification_Info
 style TextAppearance_Compat_Notification_Line2
 style TextAppearance_Compat_Notification_Time
 style TextAppearance_Compat_Notification_Title
-style Theme_AutoClicker
+style Theme_SynapseClick
 style Widget_Compat_NotificationActionContainer
 style Widget_Compat_NotificationActionText
 styleable Capability queryPatterns shortcutMatchRequired

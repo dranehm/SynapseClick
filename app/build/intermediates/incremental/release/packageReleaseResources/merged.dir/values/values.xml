@@ -3,5 +3,5 @@
     <color name="ic_launcher_background">#FFFFFF</color>
     <string name="accessibility_service_description">Synapse Click uses the AccessibilityService API to perform simulated taps and swipes on your screen.</string>
     <string name="app_name">Synapse Click</string>
-    <style name="Theme.AutoClicker" parent="android:Theme.Material.Light.NoActionBar"/>
+    <style name="Theme.SynapseClick" parent="android:Theme.Material.Light.NoActionBar"/>
 </resources>

@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.autoclicker.app-mergeReleaseResources-38:/values-b+sr+Latn/values-b+sr+Latn.xml",
+            "outputFile": "com.example.synapseclick.app-mergeReleaseResources-38:/values-b+sr+Latn/values-b+sr+Latn.xml",
             "map": [
                 {
                     "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\caches\\transforms-3\\b9669b83d5401f036d556ea3ed845f60\\transformed\\foundation-release\\res\\values-b+sr+Latn\\values-b+sr+Latn.xml",

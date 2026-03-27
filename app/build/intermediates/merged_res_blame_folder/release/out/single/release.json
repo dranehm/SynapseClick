@@ -1,42 +1,30 @@
 [
     {
-        "merged": "com.example.autoclicker.app-merged_res-40:/drawable_custom_app_icon.jpg.flat",
-        "source": "com.example.autoclicker.app-main-41:/drawable/custom_app_icon.jpg"
+        "merged": "com.example.synapseclick.app-merged_res-40:/drawable_custom_app_icon.jpg.flat",
+        "source": "com.example.synapseclick.app-main-41:/drawable/custom_app_icon.jpg"
     },
     {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/drawable/ic_launcher_foreground.xml"
     },
     {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\xml_accessibility_service_config.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\xml\\accessibility_service_config.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/xml_backup_rules.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/xml/backup_rules.xml"
     },
     {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\drawable_ic_launcher_foreground.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\drawable\\ic_launcher_foreground.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/xml_accessibility_service_config.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/xml/accessibility_service_config.xml"
     },
     {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\xml_backup_rules.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\xml\\backup_rules.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "com.example.autoclicker.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "com.example.autoclicker.app-main-41:/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\mipmap-anydpi-v26\\ic_launcher.xml"
-    },
-    {
-        "merged": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-merged_res-40:\\xml_data_extraction_rules.xml.flat",
-        "source": "C:\\Users\\pc\\scoop\\apps\\gradle\\current\\.gradle\\daemon\\8.4\\com.example.autoclicker.app-main-41:\\xml\\data_extraction_rules.xml"
-    },
-    {
-        "merged": "com.example.autoclicker.app-merged_res-40:/drawable_ic_launcher_foreground.xml.flat",
-        "source": "com.example.autoclicker.app-main-41:/drawable/ic_launcher_foreground.xml"
-    },
-    {
-        "merged": "com.example.autoclicker.app-merged_res-40:/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "com.example.autoclicker.app-main-41:/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "com.example.synapseclick.app-merged_res-40:/xml_data_extraction_rules.xml.flat",
+        "source": "com.example.synapseclick.app-main-41:/xml/data_extraction_rules.xml"
     }
 ]

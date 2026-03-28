@@ -354,8 +354,9 @@ class OverlayService : Service() {
         
         val density = resources.displayMetrics.density
         // Automatically default distance dynamically mapped to display hardware
-        val startY = centerY - (75 * density).toInt()
-        val endY = centerY + (75 * density).toInt()
+        // Swiping UP to scroll DOWN is natural, so Start is Bottom (+), End is Top (-)
+        val startY = centerY + (75 * density).toInt()
+        val endY = centerY - (75 * density).toInt()
 
         val trigger = ClickManager.addSwipe(centerX.toFloat(), startY.toFloat(), centerX.toFloat(), endY.toFloat())
         val paramsStart = createDynamicTargetParams(centerX - 75, startY - 75)

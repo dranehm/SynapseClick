@@ -80,7 +80,7 @@ class OverlayService : Service() {
 
     private fun setupOverlay() {
         val density = resources.displayMetrics.density
-        val btnSize = (60 * density).toInt()
+        val btnSize = (45 * density).toInt()  // Reduced HUD footprint by 25%
         val margin = (4 * density).toInt()
 
         val params = WindowManager.LayoutParams(
@@ -106,10 +106,10 @@ class OverlayService : Service() {
 
         val dragHandle = TextView(this).apply {
             text = "✥"
-            textSize = 28f
+            textSize = 22f
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
-            layoutParams = LinearLayout.LayoutParams(btnSize, (36*density).toInt()).apply {
+            layoutParams = LinearLayout.LayoutParams(btnSize, (28*density).toInt()).apply {
                 setMargins(0, 0, 0, margin)
             }
         }
@@ -123,11 +123,11 @@ class OverlayService : Service() {
 
         val btnCollapse = Button(this).apply {
             text = "-"
-            textSize = 18f
+            textSize = 16f
             setTextColor(Color.WHITE)
             background = getButtonBg("#FF424242", density, 10f)
             setPadding(0, 0, 0, 0)
-            layoutParams = LinearLayout.LayoutParams(btnSize, (36*density).toInt()).apply {
+            layoutParams = LinearLayout.LayoutParams(btnSize, (28*density).toInt()).apply {
                 setMargins(0, 0, 0, margin)
             }
             setOnClickListener {
@@ -141,7 +141,7 @@ class OverlayService : Service() {
             text = "00:00"
             setTextColor(Color.WHITE)
             gravity = Gravity.CENTER
-            textSize = 12f
+            textSize = 10f
             visibility = View.GONE
             layoutParams = LinearLayout.LayoutParams(btnSize, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
                 setMargins(0, 0, 0, margin)
@@ -150,7 +150,7 @@ class OverlayService : Service() {
 
         btnPlayStop = Button(this).apply {
             text = "PLAY"
-            textSize = 12f
+            textSize = 10f
             setTextColor(Color.WHITE)
             background = getButtonBg("#FF2E7D32", density) // Emerald green
             setPadding(0, 0, 0, 0)
@@ -187,7 +187,7 @@ class OverlayService : Service() {
         
         val btnAddClick = Button(this).apply {
             text = "+CLK"
-            textSize = 12f
+            textSize = 10f
             setTextColor(Color.parseColor("#FFBBDEFB"))
             background = getButtonBg("#FF1565C0", density) // Blue
             setPadding(0, 0, 0, 0)
@@ -199,7 +199,7 @@ class OverlayService : Service() {
 
         val btnAddSwipe = Button(this).apply {
             text = "+SWP"
-            textSize = 12f
+            textSize = 10f
             setTextColor(Color.parseColor("#FFBBDEFB"))
             background = getButtonBg("#FF1565C0", density)
             setPadding(0, 0, 0, 0)
@@ -217,7 +217,7 @@ class OverlayService : Service() {
 
         val btnClear = Button(this).apply {
             text = "CLR"
-            textSize = 12f
+            textSize = 10f
             setTextColor(Color.parseColor("#FFFFCDD2"))
             background = getButtonBg("#FFD84315", density) // Deep Orange/Red
             setPadding(0, 0, 0, 0)
@@ -229,14 +229,20 @@ class OverlayService : Service() {
 
         val btnClose = Button(this).apply {
             text = "CLOSE"
-            textSize = 11f
+            textSize = 9f
             setTextColor(Color.WHITE)
             background = getButtonBg("#FF616161", density) // Medium gray
             setPadding(0, 0, 0, 0)
             layoutParams = LinearLayout.LayoutParams(btnSize, btnSize).apply {
                 setMargins(0, 0, 0, margin) // No bottom margin needed for last item, but safe
             }
-            setOnClickListener { stopSelf() }
+            setOnClickListener { 
+                val intent = Intent(this@OverlayService, MainActivity::class.java).apply {
+                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                }
+                startActivity(intent)
+                stopSelf() 
+            }
         }
 
         buttonsContainer.addView(txtTimer)
@@ -275,12 +281,25 @@ class OverlayService : Service() {
         }
 
         windowManager.addView(overlayView, params)
+
+        // Real-time Opacity Slider Collector mapping to current Alpha state
+        scope.launch {
+            ClickManager.overlayAlpha.collect { alpha ->
+                overlayView.alpha = alpha
+            }
+        }
     }
 
     private fun addClickOverlayView() {
         clickCount++
-        val trigger = ClickManager.addClick(100f + 75f, 500f + 75f)
-        val params = createDynamicTargetParams(100, 500)
+        
+        val screenWidth = resources.displayMetrics.widthPixels
+        val screenHeight = resources.displayMetrics.heightPixels
+        val centerX = screenWidth / 2
+        val centerY = screenHeight / 2
+        
+        val trigger = ClickManager.addClick(centerX.toFloat(), centerY.toFloat())
+        val params = createDynamicTargetParams(centerX - 75, centerY - 75) // 150px static layout bounds radius
 
         val targetIcon = TextView(this).apply {
             text = "$clickCount"
@@ -328,9 +347,19 @@ class OverlayService : Service() {
     }
 
     private fun addSwipeOverlayViews() {
-        val trigger = ClickManager.addSwipe(100f + 75f, 500f + 75f, 100f + 75f, 200f + 75f)
-        val paramsStart = createDynamicTargetParams(100, 500)
-        val paramsEnd = createDynamicTargetParams(100, 200)
+        val screenWidth = resources.displayMetrics.widthPixels
+        val screenHeight = resources.displayMetrics.heightPixels
+        val centerX = screenWidth / 2
+        val centerY = screenHeight / 2
+        
+        val density = resources.displayMetrics.density
+        // Automatically default distance dynamically mapped to display hardware
+        val startY = centerY - (75 * density).toInt()
+        val endY = centerY + (75 * density).toInt()
+
+        val trigger = ClickManager.addSwipe(centerX.toFloat(), startY.toFloat(), centerX.toFloat(), endY.toFloat())
+        val paramsStart = createDynamicTargetParams(centerX - 75, startY - 75)
+        val paramsEnd = createDynamicTargetParams(centerX - 75, endY - 75)
 
         val targetIconStart = TextView(this).apply {
             text = "S"

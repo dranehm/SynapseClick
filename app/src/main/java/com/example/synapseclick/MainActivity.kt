@@ -66,6 +66,7 @@ fun AutoClickerScreen(
 ) {
     val intervalMs by ClickManager.clickIntervalMs.collectAsState()
     val delayBetweenMs by ClickManager.delayBetweenActionsMs.collectAsState()
+    val overlayAlpha by ClickManager.overlayAlpha.collectAsState()
 
     var textValue by remember(intervalMs) { mutableStateOf(intervalMs.toString()) }
     var textValueDelay by remember(delayBetweenMs) { mutableStateOf(delayBetweenMs.toString()) }
@@ -145,6 +146,16 @@ fun AutoClickerScreen(
                 Text("+")
             }
         }
+
+        Spacer(modifier = Modifier.height(24.dp))
+        
+        Text("Menu Opacity: ${(overlayAlpha * 100).toInt()}%")
+        Slider(
+            value = overlayAlpha,
+            onValueChange = { ClickManager.setOverlayAlpha(it) },
+            valueRange = 0.1f..1.0f,
+            modifier = Modifier.width(220.dp)
+        )
 
         Spacer(modifier = Modifier.height(32.dp))
         

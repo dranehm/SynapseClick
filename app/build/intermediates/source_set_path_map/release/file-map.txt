@@ -34,9 +34,9 @@ com.example.synapseclick.app-material-icons-core-release-32 C:\Users\pc\scoop\ap
 com.example.synapseclick.app-core-ktx-1.12.0-33 C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\fa44fe95403e1b527fae77d7822f4855\transformed\core-ktx-1.12.0\res
 com.example.synapseclick.app-ui-text-release-34 C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\fd0a0e68aa12ad4108ba89c1c2ff4f74\transformed\ui-text-release\res
 com.example.synapseclick.app-foundation-layout-release-35 C:\Users\pc\scoop\apps\gradle\current\.gradle\caches\transforms-3\ffb4c78327e416ff8d3b31a34af7f50a\transformed\foundation-layout-release\res
-com.example.synapseclick.app-resValues-36 D:\Projects\AutoClicker\app\build\generated\res\resValues\release
-com.example.synapseclick.app-packageReleaseResources-37 D:\Projects\AutoClicker\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
-com.example.synapseclick.app-packageReleaseResources-38 D:\Projects\AutoClicker\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
-com.example.synapseclick.app-merged_res-39 D:\Projects\AutoClicker\app\build\intermediates\merged_res\release
-com.example.synapseclick.app-main-40 D:\Projects\AutoClicker\app\src\main\res
-com.example.synapseclick.app-release-41 D:\Projects\AutoClicker\app\src\release\res
+com.example.synapseclick.app-resValues-36 D:\Projects\SynapseClick\app\build\generated\res\resValues\release
+com.example.synapseclick.app-packageReleaseResources-37 D:\Projects\SynapseClick\app\build\intermediates\incremental\release\packageReleaseResources\merged.dir
+com.example.synapseclick.app-packageReleaseResources-38 D:\Projects\SynapseClick\app\build\intermediates\incremental\release\packageReleaseResources\stripped.dir
+com.example.synapseclick.app-merged_res-39 D:\Projects\SynapseClick\app\build\intermediates\merged_res\release
+com.example.synapseclick.app-main-40 D:\Projects\SynapseClick\app\src\main\res
+com.example.synapseclick.app-release-41 D:\Projects\SynapseClick\app\src\release\res

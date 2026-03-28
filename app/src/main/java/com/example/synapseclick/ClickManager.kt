@@ -18,6 +18,9 @@ object ClickManager {
     private val _delayBetweenActionsMs = MutableStateFlow(50L)
     val delayBetweenActionsMs: StateFlow<Long> = _delayBetweenActionsMs
 
+    private val _overlayAlpha = MutableStateFlow(0.85f)
+    val overlayAlpha: StateFlow<Float> = _overlayAlpha
+
     private val _triggers = MutableStateFlow<List<TargetTrigger>>(emptyList())
     val triggers: StateFlow<List<TargetTrigger>> = _triggers
 
@@ -31,6 +34,10 @@ object ClickManager {
 
     fun setDelayBetweenActions(delay: Long) {
         _delayBetweenActionsMs.value = delay
+    }
+
+    fun setOverlayAlpha(alpha: Float) {
+        _overlayAlpha.value = alpha
     }
 
     fun addClick(x: Float, y: Float): ClickTrigger {

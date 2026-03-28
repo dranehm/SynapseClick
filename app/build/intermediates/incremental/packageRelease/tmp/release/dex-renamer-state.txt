@@ -1,7 +1,7 @@
-#Fri Mar 27 09:17:08 CST 2026
-base.1=D\:\\Projects\\AutoClicker\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+#Sat Mar 28 08:43:06 CST 2026
+base.1=D\:\\Projects\\SynapseClick\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
 path.1=classes2.dex
-base.0=D\:\\Projects\\AutoClicker\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+base.0=D\:\\Projects\\SynapseClick\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
 path.0=classes.dex

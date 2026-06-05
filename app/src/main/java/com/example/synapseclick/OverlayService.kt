@@ -165,11 +165,17 @@ class OverlayService : Service() {
                         text = "STOP"
                         background = getButtonBg("#FFC62828", density) // Red
                         txtTimer.visibility = View.VISIBLE
-                        txtTimer.setTextColor(Color.parseColor("#FFFFD600")) // Yellow
-                        for (i in 3 downTo 1) {
-                            txtTimer.text = "Wait $i"
-                            delay(1000)
+                        
+                        val countdown = ClickManager.countdownMs.value
+                        if (countdown > 0) {
+                            txtTimer.setTextColor(Color.parseColor("#FFFFD600")) // Yellow
+                            val totalSeconds = (countdown + 999) / 1000
+                            for (i in totalSeconds downTo 1) {
+                                txtTimer.text = "Wait $i"
+                                delay(1000)
+                            }
                         }
+                        
                         ClickManager.toggleClicking()
                         txtTimer.setTextColor(Color.parseColor("#FF00E676")) // Bright green
                         var secs = 0
@@ -237,10 +243,6 @@ class OverlayService : Service() {
                 setMargins(0, 0, 0, margin) // No bottom margin needed for last item, but safe
             }
             setOnClickListener { 
-                val intent = Intent(this@OverlayService, MainActivity::class.java).apply {
-                    addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TOP)
-                }
-                startActivity(intent)
                 stopSelf() 
             }
         }

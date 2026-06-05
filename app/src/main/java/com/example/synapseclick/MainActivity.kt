@@ -67,9 +67,11 @@ fun AutoClickerScreen(
     val intervalMs by ClickManager.clickIntervalMs.collectAsState()
     val delayBetweenMs by ClickManager.delayBetweenActionsMs.collectAsState()
     val overlayAlpha by ClickManager.overlayAlpha.collectAsState()
+    val countdownMs by ClickManager.countdownMs.collectAsState()
 
     var textValue by remember(intervalMs) { mutableStateOf(intervalMs.toString()) }
     var textValueDelay by remember(delayBetweenMs) { mutableStateOf(delayBetweenMs.toString()) }
+    var textValueCountdown by remember(countdownMs) { mutableStateOf(countdownMs.toString()) }
 
     Column(
         modifier = Modifier
@@ -143,6 +145,35 @@ fun AutoClickerScreen(
             
             Spacer(modifier = Modifier.width(16.dp))
             Button(onClick = { ClickManager.setDelayBetweenActions(delayBetweenMs + 50) }) {
+                Text("+")
+            }
+        }
+
+        Spacer(modifier = Modifier.height(16.dp))
+
+        // Row 3: Countdown Duration
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Button(onClick = { ClickManager.setCountdownMs(maxOf(0, countdownMs - 1000)) }) {
+                Text("-")
+            }
+            Spacer(modifier = Modifier.width(16.dp))
+            
+            OutlinedTextField(
+                value = textValueCountdown,
+                onValueChange = { newValue ->
+                    val filtered = newValue.filter { it.isDigit() }
+                    textValueCountdown = filtered
+                    filtered.toLongOrNull()?.let {
+                        ClickManager.setCountdownMs(it)
+                    }
+                },
+                label = { Text("Countdown (ms)") },
+                modifier = Modifier.width(160.dp),
+                singleLine = true
+            )
+            
+            Spacer(modifier = Modifier.width(16.dp))
+            Button(onClick = { ClickManager.setCountdownMs(countdownMs + 1000) }) {
                 Text("+")
             }
         }

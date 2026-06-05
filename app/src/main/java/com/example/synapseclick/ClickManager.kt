@@ -21,6 +21,9 @@ object ClickManager {
     private val _overlayAlpha = MutableStateFlow(0.85f)
     val overlayAlpha: StateFlow<Float> = _overlayAlpha
 
+    private val _countdownMs = MutableStateFlow(3000L)
+    val countdownMs: StateFlow<Long> = _countdownMs
+
     private val _triggers = MutableStateFlow<List<TargetTrigger>>(emptyList())
     val triggers: StateFlow<List<TargetTrigger>> = _triggers
 
@@ -38,6 +41,10 @@ object ClickManager {
 
     fun setOverlayAlpha(alpha: Float) {
         _overlayAlpha.value = alpha
+    }
+
+    fun setCountdownMs(countdown: Long) {
+        _countdownMs.value = maxOf(0, countdown)
     }
 
     fun addClick(x: Float, y: Float): ClickTrigger {
